@@ -1,0 +1,9 @@
+iniciar_projeto.bat
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+.venv/
+*.db
