@@ -2,7 +2,7 @@
 
 Este projeto implementa uma arquitetura de microsserviços para um mini e-commerce, aplicando conceitos de sistemas distribuídos como replicação de dados (Consistência Forte), comunicação assíncrona (RabbitMQ), tolerância a falhas (Heartbeat/Gateway) e autenticação segura (JWT).
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * **Backend:** Python 3 (FastAPI, Uvicorn, SQLAlchemy)
 * **Bancos de Dados:** PostgreSQL (2 réplicas para Produtos, 1 para Usuários, 1 para Pedidos)
 * **Mensageria:** RabbitMQ
@@ -55,7 +55,7 @@ python3 -m uvicorn main:app --port 8000
 
 ---
 
-## 🧪 Como Testar a Aplicação
+##  Como Testar a Aplicação
 
 Todas as requisições devem ser feitas EXCLUSIVAMENTE para a porta **8000** (API Gateway). O gateway se encarregará de rotear para as portas corretas.
 
