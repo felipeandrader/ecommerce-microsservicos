@@ -92,7 +92,6 @@ def create_order(order: OrderCreate, current_user: dict = Depends(get_current_us
 
 @app.get("/orders/{user_id}", response_model=list[OrderResponse])
 def get_user_orders(user_id: int, current_user: dict = Depends(get_current_user), db: Session = Depends(get_db)):
-    # Garante que o usuário só pode ver seus próprios pedidos (ou se for admin)
     if current_user.get("role") != "admin" and current_user.get("userId") != user_id:
         raise HTTPException(status_code=403, detail="Sem permissão para ver pedidos de outro usuário")
         
